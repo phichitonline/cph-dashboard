@@ -9,7 +9,9 @@ $sss = $data->SSS;
 $ucs = $data->UCS;
 $lgo = $data->LGO;
 @endphp
+
 @endforeach
+
 
     <div class="app-main__inner">
         <div class="app-page-title app-page-title-simple">
@@ -55,7 +57,7 @@ $lgo = $data->LGO;
                                         <span class="opacity-10 text-success pe-2">
                                             <i class="fa fa-angle-up"></i>
                                         </span>
-                                        {{ number_format($ofc,0) }}
+                                        {{ number_format($ofc,2) }}
                                         {{-- <small class="opacity-5 ps-1">%</small> --}}
                                     </div>
                                     <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
@@ -603,55 +605,22 @@ $lgo = $data->LGO;
                 <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">#</th>
-                            <th class="text-center">Avatar</th>
-                            <th class="text-center">Name</th>
-                            <th class="text-center">Company</th>
-                            <th class="text-center">Status</th>
-                            <th class="text-center">Due Date</th>
-                            <th class="text-center">Target Achievement</th>
+                            <th class="text-center">Code</th>
+                            <th class="text-center">HN</th>
+                            <th class="text-center">AN</th>
                             <th class="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($test as $data)
+
                         <tr>
-                            <td class="text-center text-muted" style="width: 80px;">#54</td>
-                            <td class="text-center" style="width: 80px;">
-                                <img width="40" class="rounded-circle" src="images/avatars/4.jpg" alt="">
+                            <td class="text-center text-muted" style="width: 80px;">{{ $data->code }}</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0)">{{ $data->hn }}</a>
                             </td>
                             <td class="text-center">
-                                <a href="javascript:void(0)">Juan C. Cargill</a>
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Micro Electronics</a>
-                            </td>
-                            <td class="text-center">
-                                <div class="badge rounded-pill bg-danger">Canceled</div>
-                            </td>
-                            <td class="text-center">
-                                <span class="pe-2 opacity-6">
-                                    <i class="fa fa-business-time"></i>
-                                </span>
-                                12 Dec
-                            </td>
-                            <td class="text-center" style="width: 200px;">
-                                <div class="widget-content p-0">
-                                    <div class="widget-content-outer">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left pe-2">
-                                                <div class="widget-numbers fsize-1 text-danger">71%</div>
-                                            </div>
-                                            <div class="widget-content-right w-100">
-                                                <div class="progress-bar-xs progress">
-                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                        aria-valuenow="71" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 71%;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="javascript:void(0)">{{ $data->an }}</a>
                             </td>
                             <td class="text-center">
                                 <div role="group" class="btn-group-sm btn-group">
@@ -660,144 +629,9 @@ $lgo = $data->LGO;
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="text-center text-muted" style="width: 80px;">#55</td>
-                            <td class="text-center" style="width: 80px;">
-                                <img width="40" class="rounded-circle" src="images/avatars/3.jpg" alt="">
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Johnathan Phelan</a>
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Hatchworks</a>
-                            </td>
-                            <td class="text-center">
-                                <div class="badge rounded-pill bg-info">On Hold</div>
-                            </td>
-                            <td class="text-center">
-                                <span class="pe-2 opacity-6">
-                                    <i class="fa fa-business-time"></i>
-                                </span>
-                                15 Dec
-                            </td>
-                            <td class="text-center" style="width: 200px;">
-                                <div class="widget-content p-0">
-                                    <div class="widget-content-outer">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left pe-2">
-                                                <div class="widget-numbers fsize-1 text-warning">54%</div>
-                                            </div>
-                                            <div class="widget-content-right w-100">
-                                                <div class="progress-bar-xs progress">
-                                                    <div class="progress-bar bg-warning"
-                                                        role="progressbar" aria-valuenow="54"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 54%;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-center">
-                                <div role="group" class="btn-group-sm btn-group">
-                                    <button class="btn-shadow btn btn-primary">Hire</button>
-                                    <button class="btn-shadow btn btn-primary">Fire</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center text-muted" style="width: 80px;">#56</td>
-                            <td class="text-center" style="width: 80px;">
-                                <img  width="40" class="rounded-circle" src="images/avatars/2.jpg" alt="">
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Darrell Lowe</a>
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Riddle Electronics</a>
-                            </td>
-                            <td class="text-center">
-                                <div class="badge rounded-pill bg-warning">In Progress</div>
-                            </td>
-                            <td class="text-center">
-                                <span class="pe-2 opacity-6">
-                                    <i class="fa fa-business-time"></i>
-                                </span>
-                                6 Dec
-                            </td>
-                            <td class="text-center" style="width: 200px;">
-                                <div class="widget-content p-0">
-                                    <div class="widget-content-outer">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left pe-2">
-                                                <div class="widget-numbers fsize-1 text-success">97%</div>
-                                            </div>
-                                            <div class="widget-content-right w-100">
-                                                <div class="progress-bar-xs progress">
-                                                    <div class="progress-bar bg-success"
-                                                        role="progressbar"  aria-valuenow="97"
-                                                        aria-valuemin="0" aria-valuemax="100" style="width: 97%;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-center">
-                                <div role="group" class="btn-group-sm btn-group">
-                                    <button class="btn-shadow btn btn-primary">Hire</button>
-                                    <button class="btn-shadow btn btn-primary">Fire</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center text-muted" style="width: 80px;">#56</td>
-                            <td class="text-center" style="width: 80px;">
-                                <img width="40" class="rounded-circle" src="images/avatars/1.jpg" alt="">
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">George T. Cottrell</a>
-                            </td>
-                            <td class="text-center">
-                                <a href="javascript:void(0)">Pixelcloud</a>
-                            </td>
-                            <td class="text-center">
-                                <div class="badge rounded-pill bg-success">Completed</div>
-                            </td>
-                            <td class="text-center">
-                                <span class="pe-2 opacity-6">
-                                    <i class="fa fa-business-time"></i>
-                                </span>
-                                19 Dec
-                            </td>
-                            <td class="text-center" style="width: 200px;">
-                                <div class="widget-content p-0">
-                                    <div class="widget-content-outer">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left pe-2">
-                                                <div class="widget-numbers fsize-1 text-info">88%</div>
-                                            </div>
-                                            <div class="widget-content-right w-100">
-                                                <div class="progress-bar-xs progress">
-                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                        aria-valuenow="88" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 88%;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-center">
-                                <div role="group" class="btn-group-sm btn-group">
-                                    <button class="btn-shadow btn btn-primary">Hire</button>
-                                    <button class="btn-shadow btn btn-primary">Fire</button>
-                                </div>
-                            </td>
-                        </tr>
+
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

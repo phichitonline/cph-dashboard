@@ -27,5 +27,6 @@ Route::post('/product', function () {
 // Route::resource('emr', 'EmrController');
 // Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-Route::get('/page1', [App\Http\Controllers\DashboardController::class, 'index'])->name('page1');
 Route::get('/page2', [App\Http\Controllers\DashboardController::class, 'index'])->name('page2');
+
+Route::get('/test', [App\Http\Controllers\TestController::class, 'index'])->name('test');
