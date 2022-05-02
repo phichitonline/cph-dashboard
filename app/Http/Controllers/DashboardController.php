@@ -25,8 +25,13 @@ class DashboardController extends Controller
         GROUP BY syear
         ');
 
+        $test = DB::connection('mysql_hos')->select('
+        SELECT code,an,hn FROM h_adp
+        ');
+
         return view('index', [
             'sumopd' => $sumopd,
+            'test' => $test,
         ]);
     }
 
