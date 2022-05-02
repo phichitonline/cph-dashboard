@@ -99,6 +99,12 @@
     <script type="text/javascript" src="{{ asset('assets/vendors/toastr/build/toastr.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/jquery.fancytree/dist/jquery.fancytree-all-deps.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendors/apexcharts/dist/apexcharts.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('assets/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendors/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
+
     <!-- custome.js -->
     <script type="text/javascript" src="{{ asset('assets/js/charts/apex-charts.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/circle-progress.js') }}"></script>
@@ -107,6 +113,7 @@
     <script type="text/javascript" src="{{ asset('assets/js/toastr.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/treeview.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/form-components/toggle-switch.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/tables.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 </html>

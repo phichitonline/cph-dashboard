@@ -602,7 +602,7 @@ $lgo = $data->LGO;
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+                <table style="width: 100%;" id="example" class="align-middle text-truncate mb-0 table table-borderless table-hover">
                     <thead>
                         <tr>
                             <th class="text-center">Code</th>
@@ -624,8 +624,8 @@ $lgo = $data->LGO;
                             </td>
                             <td class="text-center">
                                 <div role="group" class="btn-group-sm btn-group">
-                                    <button class="btn-shadow btn btn-primary">Hire</button>
-                                    <button class="btn-shadow btn btn-primary">Fire</button>
+                                    <button class="btn-shadow btn btn-primary">แก้ไข</button>
+                                    <button class="btn-shadow btn btn-danger">ลบ</button>
                                 </div>
                             </td>
                         </tr>
