@@ -57,7 +57,7 @@ $lgo = $data->LGO;
                                         <span class="opacity-10 text-success pe-2">
                                             <i class="fa fa-angle-up"></i>
                                         </span>
-                                        {{ number_format($ofc,2) }}
+                                        {{ number_format($ofc,0) }}
                                         {{-- <small class="opacity-5 ps-1">%</small> --}}
                                     </div>
                                     <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
@@ -612,7 +612,7 @@ $lgo = $data->LGO;
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($test as $data)
+                        {{-- @foreach ($test as $data)
 
                         <tr>
                             <td class="text-center text-muted" style="width: 80px;">{{ $data->code }}</td>
@@ -630,7 +630,7 @@ $lgo = $data->LGO;
                             </td>
                         </tr>
 
-                        @endforeach
+                        @endforeach --}}
 
                     </tbody>
                 </table>
