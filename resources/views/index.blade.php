@@ -8,6 +8,8 @@ $ofc = $data->OFC;
 $sss = $data->SSS;
 $ucs = $data->UCS;
 $lgo = $data->LGO;
+$nrd = $data->NRD;
+$other = $data->OTHER;
 @endphp
 
 @endforeach
@@ -46,7 +48,7 @@ $lgo = $data->LGO;
         </div>
 
         <div class="row">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
                 <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-primary border-primary card">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content">
@@ -71,7 +73,7 @@ $lgo = $data->LGO;
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
                 <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-danger border-danger card">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content">
@@ -96,11 +98,11 @@ $lgo = $data->LGO;
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-4">
                 <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-warning border-warning card">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content">
-                            <div class="widget-title opacity-5 text-uppercase">สปสช.</div>
+                            <div class="widget-title opacity-5 text-uppercase">บัตรทอง</div>
                             <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                                 <div class="widget-chart-flex align-items-center">
                                     <div>
@@ -118,20 +120,71 @@ $lgo = $data->LGO;
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-success border-success card">
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-primary border-primary card">
+                    <div class="widget-chat-wrapper-outer">
+                        <div class="widget-chart-content">
+                            <div class="widget-title opacity-5 text-uppercase">ท้องถิ่น</div>
+                            <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
+                                <div class="widget-chart-flex align-items-center">
+                                    <div>
+                                        <span class="opacity-10 text-success pe-2">
+                                            <i class="fa fa-angle-up"></i>
+                                        </span>
+                                        {{ number_format($lgo,0) }}
+                                        {{-- <small class="opacity-5 ps-1">%</small> --}}
+                                    </div>
+                                    <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
+                                        <div class="circle-progress circle-progress-gradient-alt-sm d-inline-block">
+                                            <small></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-danger border-danger card">
+                    <div class="widget-chat-wrapper-outer">
+                        <div class="widget-chart-content">
+                            <div class="widget-title opacity-5 text-uppercase">ด่างด้าว/ไร้สถานะสิทธิ์</div>
+                            <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
+                                <div class="widget-chart-flex align-items-center">
+                                    <div>
+                                        <span class="opacity-10 text-danger pe-2">
+                                            <i class="fa fa-angle-down"></i>
+                                        </span>
+                                        {{ number_format($nrd,0) }}
+                                        {{-- <small class="opacity-5 ps-1">%</small> --}}
+                                    </div>
+                                    <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
+                                        <div class="circle-progress circle-progress-danger-sm d-inline-block">
+                                            <small></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="widget-chart widget-chart2 text-start mb-3 card-btm-border card-shadow-warning border-warning card">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content">
                             <div class="widget-title opacity-5 text-uppercase">อื่นๆ</div>
                             <div class="widget-numbers mt-2 fsize-4 mb-0 w-100">
                                 <div class="widget-chart-flex align-items-center">
                                     <div>
-                                        <small class="text-success pe-1">+</small>
-                                        {{ number_format($lgo,0) }}
-                                        {{-- <small class="opacity-5 ps-1">hires</small> --}}
+                                        {{-- <small class="opacity-5 pe-1">$</small> --}}
+                                        {{ number_format($other,0) }}
                                     </div>
                                     <div class="widget-title ms-auto font-size-lg fw-normal text-muted">
-                                        <div class="circle-progress circle-progress-success-sm d-inline-block">
+                                        <div class="circle-progress circle-progress-warning-sm d-inline-block">
                                             <small></small>
                                         </div>
                                     </div>

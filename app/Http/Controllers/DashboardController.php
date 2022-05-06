@@ -15,14 +15,19 @@ class DashboardController extends Controller
     public function index()
     {
         $sumopd = DB::connection('mysql')->select('
-        SELECT syear,
-        SUM(IF(hipdata_code = "OFC",sum_paid_money,null)) AS OFC,
-        SUM(IF(hipdata_code = "SSS",sum_paid_money,null)) AS SSS,
-        SUM(IF(hipdata_code = "UCS",sum_paid_money,null)) AS UCS,
-        SUM(IF(hipdata_code = "LGO",sum_paid_money,null)) AS LGO
-        FROM sum_opd
-        WHERE syear = "2022"
-        GROUP BY syear
+        SELECT s_year
+        ,SUM(IF(hipdata_code IN ("OFC","BKK"),s_uc_money,NULL)) AS OFC
+        ,SUM(IF(hipdata_code IN ("SSS","SI"),s_uc_money,NULL)) AS SSS
+        ,SUM(IF(hipdata_code = "UCS",s_uc_money,NULL)) AS UCS
+        ,SUM(IF(hipdata_code = "LGO",s_uc_money,NULL)) AS LGO
+        ,SUM(IF(hipdata_code IN ("NRD","ST"),s_uc_money,NULL)) AS NRD
+        ,SUM(IF(hipdata_code NOT IN ("OFC","BKK","SSS","SI","NRD","ST","UCS","LGO"),s_uc_money,NULL)) AS OTHER
+
+        FROM sumary_opd
+
+        WHERE s_year = "2022"
+
+        GROUP BY s_year
         ');
 
         // $test = DB::connection('mysql_hos')->select('
